@@ -9,10 +9,10 @@ export default function Footer() {
             <span className="font-bold text-slate-400">ipdetect.tools</span>
             <span>&copy; {currentYear}</span>
             <span className="hidden md:inline">•</span>
-            <a href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+            <a href="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors">Privacy Policy</a>
           </div>
           <div className="text-center md:text-right">
-            Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">OpenStreetMap</a> contributors • Tiles &copy; <a href="https://www.maptiler.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">MapTiler</a>
+            Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-cyan-400 transition-colors">OpenStreetMap</a> contributors • Tiles &copy; <a href="https://www.maptiler.com/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-cyan-400 transition-colors">MapTiler</a>
           </div>
         </div>
         <div className="mt-6 text-center text-xs text-slate-400">
