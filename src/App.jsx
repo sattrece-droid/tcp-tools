@@ -4,9 +4,9 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
+import PortCheckerPage from './pages/PortCheckerPage';
 
 // Placeholder pages for routes
-const PortCheckerPage = () => <div className="text-white text-center py-20">Port Checker Coming Soon...</div>;
 const PrivacyPage = () => <div className="text-white text-center py-20">Privacy Policy Coming Soon...</div>;
 
 export default function App() {
