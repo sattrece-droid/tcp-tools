@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const PRIMARY_URL = 'https://freeipapi.com/api/json';
-const FALLBACK_URL = 'https://ipwho.is/';
+const PRIMARY_URL = 'https://free.freeipapi.com/api/json';
+const FALLBACK_URL = 'https://geolocation-db.com/json/';
 
 export function useIpData() {
   const [data, setData] = useState(null);
@@ -29,12 +29,12 @@ export function useIpData() {
           const res = await fetch(FALLBACK_URL);
           const json = await res.json();
           setData({
-            ip:      json.ip,
+            ip:      json.IPv4,
             city:    json.city,
-            region:  json.region,
-            country: json.country,
+            region:  json.state,
+            country: json.country_name,
             countryCode: json.country_code,
-            isp:     json.connection?.isp ?? json.org,
+            isp:     null,
             lat:     json.latitude,
             lon:     json.longitude,
           });
