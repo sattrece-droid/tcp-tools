@@ -6,9 +6,28 @@ import AdSlot from '../components/layout/AdSlot';
 export default function HomePage() {
   const { data, loading, error } = useIpData();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "TCP Tools - What Is My IP",
+    "description": "Instantly see your public IP address, ISP, city, and country.",
+    "url": "https://yourdomain.com/",
+    "applicationCategory": "NetworkingUtility",
+    "operatingSystem": "All",
+    "featureList": [
+      "IP Address Detection",
+      "Geolocation Lookup",
+      "Port Scanning",
+      "IPv4/IPv6 Support"
+    ]
+  };
+
   return (
     <>
       <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
         <title>What Is My IP Address — See Your IPv4, IPv6 & Location</title>
         <meta name="description"
           content="Instantly see your public IP address, ISP, city, and country. Shows both IPv4 and IPv6. No sign-up required." />
