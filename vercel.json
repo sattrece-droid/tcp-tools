@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/check-port.js": {
+      "maxDuration": 10,
+      "memory": 128
+    }
+  },
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
