@@ -12,7 +12,7 @@ export default function MapPage() {
         <title>My IP Location on Map — IP Geolocation Tool</title>
         <meta name="description"
           content="View your approximate location on an interactive map based on your IP address. Powered by IP geolocation lookup." />
-        <link rel="canonical" href="https://yourdomain.com/map" />
+        <link rel="canonical" href="https://ipdetect.tools/map" />
       </Helmet>
 
       <div className="space-y-8">

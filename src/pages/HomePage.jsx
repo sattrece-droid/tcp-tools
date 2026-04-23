@@ -9,9 +9,9 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "TCP Tools - What Is My IP",
+    "name": "ipdetect.tools - What Is My IP",
     "description": "Instantly see your public IP address, ISP, city, and country.",
-    "url": "https://yourdomain.com/",
+    "url": "https://ipdetect.tools/",
     "applicationCategory": "NetworkingUtility",
     "operatingSystem": "All",
     "featureList": [
@@ -34,8 +34,8 @@ export default function HomePage() {
         <meta property="og:title" content="What Is My IP Address" />
         <meta property="og:description"
           content="Detect your public IP, ISP, and location in one click." />
-        <meta property="og:url" content="https://yourdomain.com/" />
-        <link rel="canonical" href="https://yourdomain.com/" />
+        <meta property="og:url" content="https://ipdetect.tools/" />
+        <link rel="canonical" href="https://ipdetect.tools/" />
       </Helmet>
 
       <div className="space-y-12">

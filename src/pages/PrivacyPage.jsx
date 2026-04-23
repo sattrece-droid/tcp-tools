@@ -4,9 +4,9 @@ export default function PrivacyPage() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy — TCP Tools</title>
-        <meta name="description" content="Privacy Policy for TCP Tools. Learn how we handle your data and IP information." />
-        <link rel="canonical" href="https://yourdomain.com/privacy" />
+        <title>Privacy Policy — ipdetect.tools</title>
+        <meta name="description" content="Privacy Policy for ipdetect.tools. Learn how we handle your data and IP information." />
+        <link rel="canonical" href="https://ipdetect.tools/privacy" />
       </Helmet>
 
       <div className="prose prose-invert max-w-none bg-slate-800/30 border border-slate-700/50 p-8 rounded-3xl">
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold text-cyan-400 mb-3">1. Information We Collect</h2>
           <p className="text-slate-400">
-            TCP Tools is designed to be a privacy-first utility. We do not require account registration. 
+            ipdetect.tools is designed to be a privacy-first utility. We do not require account registration. 
             When you use our tools (What Is My IP, IP Map, or Port Checker), we process your IP address 
             solely to provide the requested service.
           </p>

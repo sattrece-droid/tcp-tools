@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-400">TCP Tools</span>
+            <span className="font-bold text-slate-400">ipdetect.tools</span>
             <span>&copy; {currentYear}</span>
             <span className="hidden md:inline">•</span>
             <a href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>

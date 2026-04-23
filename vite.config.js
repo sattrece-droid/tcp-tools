@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     sitemap({
-      hostname: 'https://yourdomain.com', // Replace with your actual domain
+      hostname: 'https://ipdetect.tools',
       dynamicRoutes: ['/map', '/port-checker'],
     }),
   ],

@@ -15,7 +15,7 @@ export default function PortCheckerPage() {
         <title>Port Checker — Test If a Port Is Open or Closed</title>
         <meta name="description"
           content="Check if any TCP port is open or closed on your IP or any hostname. Supports ports 1–65535. Free online port scanner." />
-        <link rel="canonical" href="https://yourdomain.com/port-checker" />
+        <link rel="canonical" href="https://ipdetect.tools/port-checker" />
       </Helmet>
 
       <div className="space-y-12">
