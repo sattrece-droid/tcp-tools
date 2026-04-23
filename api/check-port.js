@@ -1,5 +1,4 @@
-// api/check-port.js
-const net = require('net');
+import net from 'net';
 
 // Ports that are never checked — prevents abuse
 const BLOCKED_PORTS = new Set([25, 465, 587]); // SMTP (spam prevention)
@@ -18,7 +17,7 @@ function isValidHost(host) {
   return !privatePatterns.some(p => p.test(host));
 }
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   // CORS header — only needed if calling from different origin in dev
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
