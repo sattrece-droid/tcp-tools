@@ -3,9 +3,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
+import MapPage from './pages/MapPage';
 
 // Placeholder pages for routes
-const MapPage = () => <div className="text-white text-center py-20">Map Page Coming Soon...</div>;
 const PortCheckerPage = () => <div className="text-white text-center py-20">Port Checker Coming Soon...</div>;
 const PrivacyPage = () => <div className="text-white text-center py-20">Privacy Policy Coming Soon...</div>;
 
