@@ -18,7 +18,7 @@ export default function AdSlot({ slotId, format = 'auto', className = '' }) {
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"   // Replace with your publisher ID
+        data-ad-client="ca-pub-8815403583135841"
         data-ad-slot={slotId}
         data-ad-format={format}
         data-full-width-responsive="true"
