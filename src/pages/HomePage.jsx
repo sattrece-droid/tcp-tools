@@ -31,11 +31,15 @@ export default function HomePage() {
         <title>What Is My IP Address — See Your IPv4, IPv6 & Location</title>
         <meta name="description"
           content="Instantly see your public IP address, ISP, city, and country. Shows both IPv4 and IPv6. No sign-up required." />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="What Is My IP Address" />
         <meta property="og:description"
           content="Detect your public IP, ISP, and location in one click." />
         <meta property="og:url" content="https://ipdetect.tools/" />
         <link rel="canonical" href="https://ipdetect.tools/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="What Is My IP Address — See Your IPv4, IPv6 & Location" />
+        <meta name="twitter:description" content="Detect your public IP, ISP, and location in one click. No sign-up required." />
       </Helmet>
 
       <div className="space-y-12">

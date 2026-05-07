@@ -7,6 +7,10 @@ export default function PrivacyPage() {
         <title>Privacy Policy — ipdetect.tools</title>
         <meta name="description" content="Privacy Policy for ipdetect.tools. Learn how we handle your data and IP information." />
         <link rel="canonical" href="https://ipdetect.tools/privacy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy — ipdetect.tools" />
+        <meta property="og:description" content="Privacy Policy for ipdetect.tools. Learn how we handle your data and IP information." />
+        <meta property="og:url" content="https://ipdetect.tools/privacy" />
       </Helmet>
 
       <div className="prose prose-invert max-w-none bg-slate-800/30 border border-slate-700/50 p-8 rounded-3xl">

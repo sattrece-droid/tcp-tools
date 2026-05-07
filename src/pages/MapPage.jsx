@@ -13,6 +13,13 @@ export default function MapPage() {
         <meta name="description"
           content="View your approximate location on an interactive map based on your IP address. Powered by IP geolocation lookup." />
         <link rel="canonical" href="https://ipdetect.tools/map" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="My IP Location on Map — IP Geolocation Tool" />
+        <meta property="og:description" content="View your approximate location on an interactive map based on your IP address." />
+        <meta property="og:url" content="https://ipdetect.tools/map" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="My IP Location on Map — IP Geolocation Tool" />
+        <meta name="twitter:description" content="View your approximate location on an interactive map based on your IP address." />
       </Helmet>
 
       <div className="space-y-8">
