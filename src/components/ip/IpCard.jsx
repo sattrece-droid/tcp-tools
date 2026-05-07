@@ -41,6 +41,7 @@ export default function IpCard({ data, loading, error }) {
                 copying ? 'bg-green-500/20 text-green-400' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
               title="Copy IP Address"
+              aria-label={copying ? 'IP address copied' : 'Copy IP address'}
             >
               {copying ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
