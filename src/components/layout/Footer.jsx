@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -9,7 +11,7 @@ export default function Footer() {
             <span className="font-bold text-slate-400">ipdetect.tools</span>
             <span>&copy; {currentYear}</span>
             <span className="hidden md:inline">•</span>
-            <a href="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+            <Link to="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors">Privacy Policy</Link>
           </div>
           <div className="text-center md:text-right">
             Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-cyan-400 transition-colors">OpenStreetMap</a> contributors • Tiles &copy; <a href="https://www.maptiler.com/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-cyan-400 transition-colors">MapTiler</a>

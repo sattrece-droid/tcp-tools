@@ -28,6 +28,7 @@ export default function GeoMap({ lat, lon, label }) {
       center={[lat, lon]}
       zoom={11}
       className="h-96 w-full rounded-xl z-0 shadow-lg shadow-black/20"
+      aria-label="IP geolocation map"
     >
       <TileLayer
         url={`https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=${MAPTILER_KEY}`}
