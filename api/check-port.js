@@ -3,23 +3,30 @@ import net from 'net';
 // Ports that are never checked — prevents abuse
 const BLOCKED_PORTS = new Set([25, 465, 587]); // SMTP (spam prevention)
 
-// Validates hostname / IP4 / IP6, rejects private ranges
+// Validates hostname / IP4 / IP6, rejects private and special-purpose ranges
 function isValidHost(host) {
-  if (!host || host.length > 253) return false;
-  const privatePatterns = [
-    /^127\./,           // loopback
-    /^10\./,            // private
-    /^192\.168\./,      // private
-    /^172\.(1[6-9]|2\d|3[01])\./,  // private
-    /^::1$/,            // IPv6 loopback
-    /^localhost$/i,     // localhost
+  if (!host || typeof host !== 'string' || host.length > 253) return false;
+  const blockedPatterns = [
+    /^127\./,                          // IPv4 loopback
+    /^10\./,                           // RFC-1918 private
+    /^192\.168\./,                     // RFC-1918 private
+    /^172\.(1[6-9]|2\d|3[01])\./,     // RFC-1918 private
+    /^169\.254\./,                     // link-local (AWS/GCP metadata)
+    /^0\./,                            // "this" network
+    /^0\.0\.0\.0$/,                    // unspecified
+    /^::1$/,                           // IPv6 loopback
+    /^[fF][cCdD]/,                     // IPv6 unique-local (fc00::/7)
+    /^[fF][eE][89aAbB]/,               // IPv6 link-local (fe80::/10)
+    /^localhost$/i,                    // localhost hostname
+    /^.*\.localhost$/i,                // *.localhost subdomains
   ];
-  return !privatePatterns.some(p => p.test(host));
+  return !blockedPatterns.some(p => p.test(host));
 }
 
+const ALLOWED_ORIGIN = 'https://ipdetect.tools';
+
 export default async function handler(req, res) {
-  // CORS header — only needed if calling from different origin in dev
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
