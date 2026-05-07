@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const QUICK_PORTS = [
   { label: 'HTTP', port: 80 },
@@ -11,17 +11,11 @@ const QUICK_PORTS = [
 ];
 
 export default function PortForm({ onCheck, loading, detectedIp }) {
-  const [host, setHost] = useState('');
+  const [customHost, setCustomHost] = useState('');
   const [port, setPort] = useState('80');
   const [mode, setMode] = useState('my-ip'); // 'my-ip' or 'custom'
 
-  useEffect(() => {
-    if (mode === 'my-ip' && detectedIp) {
-      setHost(detectedIp);
-    } else if (mode === 'custom') {
-      setHost('');
-    }
-  }, [mode, detectedIp]);
+  const host = mode === 'my-ip' ? (detectedIp ?? '') : customHost;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -61,7 +55,7 @@ export default function PortForm({ onCheck, loading, detectedIp }) {
           <input
             type="text"
             value={host}
-            onChange={(e) => setHost(e.target.value)}
+            onChange={(e) => setCustomHost(e.target.value)}
             disabled={mode === 'my-ip'}
             placeholder="e.g. google.com or 8.8.8.8"
             className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all disabled:opacity-50"

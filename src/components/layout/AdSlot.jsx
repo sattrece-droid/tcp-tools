@@ -8,7 +8,7 @@ export default function AdSlot({ slotId, format = 'auto', className = '' }) {
       if (ref.current && ref.current.offsetWidth > 0) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
-    } catch (e) {
+    } catch {
       // AdSense not loaded (OK in dev, expected)
     }
   }, []);
