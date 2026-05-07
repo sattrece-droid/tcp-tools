@@ -18,7 +18,7 @@ export default function AdSlot({ slotId, format = 'auto', className = '' }) {
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-8815403583135841"
+        data-ad-client={import.meta.env.VITE_ADSENSE_CLIENT}
         data-ad-slot={slotId}
         data-ad-format={format}
         data-full-width-responsive="true"

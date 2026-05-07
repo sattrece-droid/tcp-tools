@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useIpData } from '../hooks/useIpData';
+import { useIpDataContext as useIpData } from '../hooks/useIpDataContext';
 import { usePortCheck } from '../hooks/usePortCheck';
 import PortForm from '../components/portchecker/PortForm';
 import PortResult from '../components/portchecker/PortResult';

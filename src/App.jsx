@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { IpDataProvider } from './context/IpDataContext';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+      <IpDataProvider>
         <div className="min-h-screen flex flex-col bg-slate-900 text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
           <Header />
           <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
@@ -35,6 +37,7 @@ export default function App() {
           </main>
           <Footer />
         </div>
+      </IpDataProvider>
       </BrowserRouter>
     </HelmetProvider>
   );

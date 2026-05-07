@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useIpData } from '../hooks/useIpData';
+import { useIpDataContext as useIpData } from '../hooks/useIpDataContext';
 import GeoMap from '../components/map/GeoMap';
 import AdSlot from '../components/layout/AdSlot';
 
