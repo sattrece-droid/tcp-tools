@@ -7,6 +7,7 @@ export default function Header() {
     { name: 'What Is My IP', path: '/' },
     { name: 'IP Map', path: '/map' },
     { name: 'Port Checker', path: '/port-checker' },
+    { name: 'Blog', path: '/blog' },
   ];
 
   return (

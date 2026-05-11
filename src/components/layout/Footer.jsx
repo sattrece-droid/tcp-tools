@@ -7,10 +7,16 @@ export default function Footer() {
     <footer className="bg-slate-900 border-t border-slate-800 py-8 mt-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="font-bold text-slate-400">ipdetect.tools</span>
             <span>&copy; {currentYear}</span>
             <span className="hidden md:inline">•</span>
+            <Link to="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</Link>
+            <span>•</span>
+            <Link to="/blog" className="text-slate-300 hover:text-cyan-400 transition-colors">Blog</Link>
+            <span>•</span>
+            <Link to="/contact" className="text-slate-300 hover:text-cyan-400 transition-colors">Contact</Link>
+            <span>•</span>
             <Link to="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors">Privacy Policy</Link>
           </div>
           <div className="text-center md:text-right">
