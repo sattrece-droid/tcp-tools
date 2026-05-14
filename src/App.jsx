@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import { IpDataProvider } from './context/IpDataContext';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -39,6 +40,7 @@ export default function App() {
         </div>
       </IpDataProvider>
       </BrowserRouter>
+      <Analytics />
     </HelmetProvider>
   );
 }
