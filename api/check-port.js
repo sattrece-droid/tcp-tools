@@ -1,7 +1,11 @@
 import net from 'net';
 
 // Ports that are never checked — prevents abuse
-const BLOCKED_PORTS = new Set([25, 465, 587]); // SMTP (spam prevention)
+const BLOCKED_PORTS = new Set([
+  23,           // Telnet
+  25, 465, 587, // SMTP
+  2525,         // SMTP alternate
+]);
 
 // Validates hostname / IP4 / IP6, rejects private and special-purpose ranges
 function isValidHost(host) {

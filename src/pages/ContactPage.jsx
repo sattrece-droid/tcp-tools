@@ -94,7 +94,7 @@ export default function ContactPage() {
         </form>
 
         <div className="bg-slate-800/30 border border-slate-700/50 p-5 rounded-2xl text-sm text-slate-400">
-          You can also reach us at <span className="text-cyan-400">hello@ipdetect.tools</span>. We typically respond within 1–2 business days.
+          You can also reach us at <span className="text-cyan-400">ipdetect@agentmail.to</span>. We typically respond within 1–2 business days.
         </div>
       </div>
     </>
