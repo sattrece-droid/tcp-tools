@@ -10,6 +10,18 @@ import HomePage from './pages/HomePage';
 const MapPage = lazy(() => import('./pages/MapPage'));
 const PortCheckerPage = lazy(() => import('./pages/PortCheckerPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
+const BlogIndexPage = lazy(() => import('./pages/blog/BlogIndexPage'));
+const WhatIsPublicIpPage = lazy(() => import('./pages/blog/WhatIsPublicIpPage'));
+const Ipv4VsIpv6Page = lazy(() => import('./pages/blog/Ipv4VsIpv6Page'));
+const HowToCheckPortPage = lazy(() => import('./pages/blog/HowToCheckPortPage'));
+const WhatIpRevealsPage = lazy(() => import('./pages/blog/WhatIpRevealsPage'));
+const HideYourIpPage = lazy(() => import('./pages/blog/HideYourIpPage'));
+const WhatIsIspPage = lazy(() => import('./pages/blog/WhatIsIspPage'));
+const HowGeolocationWorksPage = lazy(() => import('./pages/blog/HowGeolocationWorksPage'));
+const DynamicVsStaticIpPage = lazy(() => import('./pages/blog/DynamicVsStaticIpPage'));
 
 function PageLoader() {
   return (
@@ -33,6 +45,17 @@ export default function App() {
                 <Route path="/map" element={<MapPage />} />
                 <Route path="/port-checker" element={<PortCheckerPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogIndexPage />} />
+                <Route path="/blog/what-is-a-public-ip-address" element={<WhatIsPublicIpPage />} />
+                <Route path="/blog/ipv4-vs-ipv6" element={<Ipv4VsIpv6Page />} />
+                <Route path="/blog/how-to-check-if-a-port-is-open" element={<HowToCheckPortPage />} />
+                <Route path="/blog/what-your-ip-address-reveals" element={<WhatIpRevealsPage />} />
+                <Route path="/blog/how-to-hide-your-ip-address" element={<HideYourIpPage />} />
+                <Route path="/blog/what-is-an-isp" element={<WhatIsIspPage />} />
+                <Route path="/blog/how-ip-geolocation-works" element={<HowGeolocationWorksPage />} />
+                <Route path="/blog/dynamic-vs-static-ip" element={<DynamicVsStaticIpPage />} />
               </Routes>
             </Suspense>
           </main>
